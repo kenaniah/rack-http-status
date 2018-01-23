@@ -39,6 +39,7 @@ end
 Each status class inherits from `Rack::HTTP::Status`, and contains the following convenience methods:
 
 | Method | Description | Example |
+| ------ | ----------- | ------- |
 | `#to_sym` | Returns the symbolized version of this HTTP status | `NotFound.to_sym` => `:not_found` |
 | `#to_i` | Returns the HTTP status code's value | `NoContent.to_i` => `204` |
 | `#to_s` | Returns the description of the HTTP status | `NonAuthoritativeInformation.to_s` => `"Non-Authoritative Information"` |
