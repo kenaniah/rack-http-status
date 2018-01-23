@@ -28,10 +28,10 @@ class ExampleController < ApplicationController
     render plain: "Status code was: #{status.code} - #{status}", status: status
   end
   def action1
-    head NoContent # => Returns HTTP 204 No Content
+    head NoContent # => HTTP 204 No Content
   end
   def action2
-    raise NotFound # => Renders HTTP 404 with "Status code was: 404 - Not Found" body
+    raise NotFound # => HTTP 404 with "Status code was: 404 - Not Found" body
   end
 end
 ```
@@ -40,9 +40,9 @@ Each status class inherits from `Rack::HTTP::Status`, and contains the following
 
 | Method | Description | Example |
 | ------ | ----------- | ------- |
-| `#to_sym` | Returns the symbolized version of this HTTP status | `NotFound.to_sym` => `:not_found` |
-| `#to_i` | Returns the HTTP status code's value | `NoContent.to_i` => `204` |
-| `#to_s` | Returns the description of the HTTP status | `NonAuthoritativeInformation.to_s` => `"Non-Authoritative Information"` |
+| `#to_sym` | Returns the symbolized version of this HTTP status | `NotFound.to_sym #=> :not_found` |
+| `#to_i` | Returns the HTTP status code's value | `NoContent.to_i #=> 204` |
+| `#to_s` | Returns the description of the HTTP status | `NonAuthoritativeInformation.to_s #=> "Non-Authoritative Information"` |
 
 ## Development
 
